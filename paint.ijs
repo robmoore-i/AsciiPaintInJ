@@ -16,6 +16,8 @@ NB. width newCanvas height
 newCanvas=:('-'&amendWrap)@:((2 + ,~) $ ('|'&wrap)@:([ # '.'"1))
 
 NB. canvas drawer character
+NB. Produces a function which accepts positions and draws them onto
+NB. the given canvas with the given character.
 drawer =: 2 : 0
   n ((<"1)y)} m
 )
