@@ -1,5 +1,8 @@
 ProjectsHome=:> (<1 1){UserFolders_j_
-load ProjectsHome,'/AsciiPaintInJ/coordinateStack.ijs'
+AsciiPaintInJHome=:ProjectsHome,'/AsciiPaintInJ'
+loadProjectFile=:load@:(AsciiPaintInJHome&,)@:('/'&,)
+loadProjectFile 'coordinateStack.ijs'
+loadProjectFile 'debug.ijs'
 
 NB. wrapper wrap wrappee
 wrap=:([ , ,~)
@@ -58,7 +61,7 @@ fill =: 4 : 0
     ('currentPos';'searchStack')=.stackPop searchStack
     copyCanvas=.(copyCanvas drawer newc) currentPos
     neighbours=.copyCanvas colourMatchingNeighbours oldc;currentPos
-    searchStack=.searchStack stackAdd neighbours
+    searchStack=.(searchStack stackAdd neighbours) -. 0 0
   end.
   copyCanvas
 )

@@ -4,10 +4,10 @@ stackNew =: [
 NB. stackEmpty stack | stackNotEmpty stack | stackHasOneElement stack
 stackEmpty=:(# = 0:)
 stackNotEmpty=:-.@:stackEmpty
-stackHasOneElement=:(#@:$ = 1:)
+stackHasOneOrFewerElements=:(#@:$ = 1:)
 
 NB. stackPop stack
-stackPop =:(({. ; }.)`(] ; 2: }. ]))@.stackHasOneElement
+stackPop =:(({. ; }.)`(] ; 2: }. ]))@.stackHasOneOrFewerElements
 
 NB. stack stackAdd elem
 stackAdd =:,`(((>:@:-:@:#@:[ , 2:) $ ,))@.((1: = #@:$@:[) *. (1: = #@:$@:]))
