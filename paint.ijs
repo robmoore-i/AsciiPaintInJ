@@ -69,6 +69,9 @@ fill =: 4 : 0
 )
 
 NB. sideLength halfDiamond dy
+NB. Produces a monad which takes a position and produces a list
+NB. of points corresponding to a half diamond with the given
+NB. side length and diverging in the given direction.
 halfDiamond =: 2 : 0
   (y (,"0) _1 1)&(] , ,/@:((+"1)^:(>:@:i.@:<: x)))
 )
