@@ -66,4 +66,16 @@ fill =: 4 : 0
   copyCanvas
 )
 
+NB. sideLength halfDiamond dy
+halfDiamond =: 2 : 0
+  (y (,"0) _1 1)&(] , ,/@:((+"1)^:(>:@:i.@:<: x)))
+)
+
+NB. sideLength diamond topPosition
+diamond =: 4 : 0
+  bottomPosition=.x (({.@:] + (2: * <:@:[)) , {:@:]) y
+  topHalf=.(x halfDiamond 1) y
+  bottomHalf=.(x halfDiamond _1) bottomPosition
+  topHalf,bottomHalf
+)
 
