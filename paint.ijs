@@ -1,5 +1,5 @@
 ProjectsHome=:> (<1 1){UserFolders_j_
-load ProjectsHome,'/JPaint/coordinateStack.ijs'
+load ProjectsHome,'/AsciiPaintInJ/coordinateStack.ijs'
 
 NB. wrapper wrap wrappee
 wrap=:([ , ,~)
