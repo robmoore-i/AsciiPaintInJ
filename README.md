@@ -8,6 +8,23 @@ All the things you can ask this program to do, in one line:
 ((((10 newCanvas 10) drawer 'o' 6 square 2 4) drawer 'x' 5 verticalLine 2 7) drawer 's' 7 horizontalLine 1 9) fill '#';5 3
 ```
 
+Which produces this piece of art:
+
+```
+------------
+|..........|
+|....x.....|
+|....x.....|
+|.oooxoo...|
+|.o##x.o...|
+|.o##x.o...|
+|sssssssss.|
+|.o....o...|
+|.oooooo...|
+|..........|
+------------
+```
+
 - Make a blank canvas
 
 - Lines

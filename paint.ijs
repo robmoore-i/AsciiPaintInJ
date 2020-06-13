@@ -1,6 +1,6 @@
-ProjectsHome=:> (<1 1){UserFolders_j_
-AsciiPaintInJHome=:ProjectsHome,'/AsciiPaintInJ'
-loadProjectFile=:load@:(AsciiPaintInJHome&,)@:('/'&,)
+NB. assume we're running from this project's root directory
+asciiPaintHome=:'.'
+loadProjectFile=:load@:(asciiPaintHome&,)@:('/'&,)
 loadProjectFile 'coordinateStack.ijs'
 loadProjectFile 'debug.ijs'
 
